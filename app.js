@@ -4,7 +4,7 @@ const app = express();
 app.get('/', (req, res) => {
   const code = req.query.code;
   if (code) {
-    res.redirect('InstagramProject://oauth-callback/instagram?code=${encodeURIComponent(code)}');
+    res.redirect(`InstagramProject://oauth-callback/instagram?code=${encodeURIComponent(code)}`);
   } else {
     res.send('Missing code.');
   }
